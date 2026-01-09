@@ -1,2 +1,6 @@
 # myrepo
 Repository for testing my Git/GitHub setup for BIO 708.
+
+Jan 8th Assignment:
+The dataset I have provided comes from auditory brainstem recordings (ABR) done in mice. As part of my project, I am examining the brain circuitry link between sensory processing and social behaviour within a genetic model of autism spectrum disorder (ASD) known as the Cntnap2-knockout mouse model. To better understand how sensory processing may be altered within this model, I collected ABR data to examine whether auditory processing is intact within these animals. ABRs are a type of elecctrophysiologycal hearing test that measures how the brain responds to sound and is represented my distinct peaks that occur during recording. Each of these peaks represents a structure along the auditory processing pathway, for instance wave I represents the auditory nerve, and we can extract amplitudes and latencies from these recordings.
+From my data, I am trying to determine whether or not auditory processing is altered within the Cntnap2-knockout mouse model and to examine if there is a developmental phenotype.
