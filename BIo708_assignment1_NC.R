@@ -3,6 +3,8 @@ library(ratdat)
 library(tidyverse)
 library(dplyr)
 
+## JD: Puzzled how you decided what to do, and hwy you did so much. We asked just for a “substantive calculation”.
+
 # Importing csv file containing ABR data [Note: ensure file is in wd]
 data <- read.csv("BIO708_Amps_Lats_NC.csv")
 
@@ -26,7 +28,9 @@ adult_summary <- adult_data %>%
             .groups = "drop") # overrides the grouped output from summarize()
 
 head(adult_summary)
-View(adult_summary)
+
+## JD: View can be run in console or you can use the rstudio panel; it's not great for scripts
+## View(adult_summary)
 
 juvenile_data <- data %>% # %>% creates a pipeline
   # Filter rows to extract only adult data, %in% will ask if the value of the left is found on the right vector (from chapter 4)
@@ -75,5 +79,6 @@ ggplot(juvenile_data, mapping = aes(x = Wave, y = Amplitude, fill = Genotype)) +
   geom_boxplot() +
   geom_point(alpha = 0.2) 
 
-
+## JD: Please try to make your submission responsive to the assignment; this allows us to focus and give useful feedback to the large number of students.
+## Grade 2/3
 
