@@ -11,7 +11,9 @@ Next, it double checks that there are only the expected categories for each of m
 
 My second script titled "BIO708_assignment2_analysis.R" reads the cleaned RDS file genarated from the first script and calculates the mean and standard deviation bt age, genotype and wave.
 
-Both scripts should be run from the QMEE directory in this GitHub.
+Both scripts should be run from the QMEE directory in this GitHub:
+QMEE/BIO708_assignment2_datacleaning_NC.R
+QMEE/BIO708_assignment2_analysis.R
 
 For my data, I want to investigate the amplitude and latency values between the two age groups. This would mean I would filter through the values depending on if they are juvenile or adult, and replicate the components to run the same analysis on both. For age, I would like to investigate how the amplitude and latency values change throughout development (i.e. if there is a significant difference in mean, etc.). Additionally, I plan on separating my analysis between the WT and KO genotypes to see if the two groups are different. For this investigation, I would like to see if amplitude and latency values are significantly different between the genotypes, and whether KO have a higher variability constant than WT.
 
