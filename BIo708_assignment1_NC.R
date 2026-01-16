@@ -51,9 +51,9 @@ head(juv_summary)
 View(juv_summary)
 
 # ============================
-# Calculating the coeffficient of vaciation - this is an important parameter to look at because we hypothesize greater variation in KO
+# Calculating the coefficient of variation - this is an important parameter to look at because we hypothesize greater variation in KO
 adult_summary <- adult_summary %>%
-  mutate(adult_cv_amp = adult_sd_amp/adult_mean_amp,
+  mutate(adult_cv_amp = adult_sd_amp/adult_mean_amp, # adding cv values to the other summary data
          adult_cv_late = adult_sd_lat/adult_mean_lat)
 
 head(adult_summary)
