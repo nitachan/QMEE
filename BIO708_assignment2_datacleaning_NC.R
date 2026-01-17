@@ -1,7 +1,10 @@
 library(ggplot2)
-library(ratdat)
+library(ratdat)  ## BMB: why are you including this?
 library(tidyverse)
 library(dplyr)
+## BMB: dplyr/ggplot2 are redundant with tidyverse.
+## don't need to load them separately.
+
 
 # Importing csv file containing ABR data [Note: ensure file is in wd]
 abr_data <- read.csv("BIO708_Amps_Lats_NC.csv")
@@ -26,12 +29,16 @@ abr_duplicates <- abr_data %>%
   filter(n > 1)
 print(abr_duplicates)
 # The output is '0 rows' which means no duplicates
+## BMB:
+stopifnot(nrow(abr_duplicates) == 0)
 
 # Time to check if there are NA values in the numerical variables
 # From abr_data, count how many NAs there are in numeric columns (i.e. Amplitude, Latency, P2P)
 amps_lats <- abr_data %>%
   summarise(across(where(is.numeric), ~ sum(is.na(.))))
 print(amps_lats)
+## BMB: (use unlist() to turn a row of a data frame into a vector)
+stopifnot(all(unlist(amps_lats)  == 0))
 
 # Time to convert character variables to factors to clean data 
 abr_clean <- abr_data %>%

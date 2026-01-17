@@ -12,5 +12,8 @@ amp_summary <- abr_cleaned %>%
     n        = n(),  # number of entries each group
     .groups = "drop"
   )
+## BMB: note, could  use .by = as in Friday's lecture
 
 print(amp_summary)
+
+## mark: 2
