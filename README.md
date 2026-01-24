@@ -21,6 +21,7 @@ For my data, I want to investigate the amplitude and latency values between the 
 BMB: "if the groups are different" is problematic (we will discuss this later); some consideration of *biologically* significant difference, or (better) directional  predictions, are better. Interactions may be interesting (e.g., how do the effects of  age differ between genotypes?) but you may need to limit your questions based on available data/consider statistical power.
 
 ## Jan 23rd Assignment 3:
+Note: You will need to run the previous assignemnt script `QMEE/BIO708_assignment2_datacleaning_NC.R` to generate the RDS file to run this new script.
 
 I made two plots in `QMEE/BIO708_assignment3_ggplot_NC.R`:
 My first plot displays ABR amplitudes across waves and genotypes, separated by sex and age to allow for comparisons within these biologically relevant factors. This allows the identification of potential sex and age differences. Since ABR waves I-IV are sequentially linked, I chose a point and line plot to display trends across the waves. Additionally, I chose to display my raw data points as jitter plots to show variability between animals. 
