@@ -1,7 +1,5 @@
-library(ggplot2)
-library(ratdat)
 library(tidyverse)
-library(dplyr)
+
 
 # Importing csv file containing ABR data [Note: ensure file is in wd]
 abr_data <- read.csv("BIO708_Amps_Lats_NC.csv")
@@ -44,15 +42,15 @@ abr_clean <- abr_data %>%
   )
 
 # Re-check structure - categorical variables should now be factors, can also just do this in console 
-str(abr_data)
+str(abr_clean)
 
 # ============================  
 # Make one or two plots that might help you see whether your data have any errors or anomalies
-ggplot(abr_data, aes(x = Wave, y = Amplitude, color = Genotype)) +
+ggplot(abr_clean, aes(x = Wave, y = Amplitude, color = Genotype)) +
   geom_boxplot() +
   labs(y = "Amplitude (uV)", title = "ABR Wave Amplitude")
 
-ggplot(abr_data, aes(x = Wave, y = Latency,  color = Genotype)) +
+ggplot(abr_clean, aes(x = Wave, y = Latency,  color = Genotype)) +
   geom_boxplot() +
   labs(x = "Latency (ms)", title = "ABR Wave Latency")
 
@@ -60,4 +58,4 @@ ggplot(abr_data, aes(x = Wave, y = Latency,  color = Genotype)) +
 
 # ============================  
 # Use the saveRDS function in R to save a clean (or clean-ish) version of your data
-saveRDS(abr_data, file = "abr_cleaned.rds")
+saveRDS(abr_clean, file = "abr_cleaned.rds")
