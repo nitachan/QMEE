@@ -22,7 +22,7 @@ BMB: "if the groups are different" is problematic (we will discuss this later); 
 
 ## Jan 23rd Assignment 3:
 
-I made two plots in `QMEE/BIO708_assignment3_ggplot_NC.R':
+I made two plots in `QMEE/BIO708_assignment3_ggplot_NC.R`:
 My first plot displays ABR amplitudes across waves and genotypes, separated by sex and age to allow for comparisons within these biologically relevant factors. This allows the identification of potential sex and age differences. Since ABR waves I-IV are sequentially linked, I chose a point and line plot to display trends across the waves. Additionally, I chose to display my raw data points as jitter plots to show variability between animals. 
 
 My second plot displays ABR latencies, but this time I facted by wave to show age-related changes across genotypes. Waves have different latency ranges so using separate axes for each wave avoids compressing the data points. I arranged the facets bottom-to-top with waves I–IV in sequential order so that the y-axis consistently increases, maintaining consistency when comparing subsets.
